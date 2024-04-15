@@ -1,0 +1,38 @@
+/* laptop 1024px  Tablet 640px */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.homeBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5%;
+}
+
+.homeBox .imageHome {
+    background-color: black;
+    /* min-width: calc(50% - 5%); */
+    height: 200px;
+    width: 300px;
+}
+
+.homeBox .txtHome {
+    background-color: black;
+    height: 500px;
+    /* min-width: calc(50% - 25%); */
+    width: 500px;
+}
+
+.mayteHome {
+    background-color: violet;
+    height: 500px;
+    width: 500px;
+}
+
+/* Mobile */
+@media screen and (max-width:480px) {}

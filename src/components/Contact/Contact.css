@@ -1,0 +1,19 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.contactBox {
+    background-color:tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+}
+
+/* Mobile */
+@media screen and (max-width:480px) {}
