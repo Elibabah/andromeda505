@@ -24,27 +24,27 @@ export default function Portfolio() {
 
   useEffect(()=>{
     setTimeout(() => {
-      if (homeIsIntersecting) {
-        document.getElementById('homeTog').classList.add('Cabecera-h1-act-link')
-        document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-        document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-        document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      }else if(skillsIsIntersected) {
-        document.getElementById('skillsTog').classList.add('Cabecera-li-act-link')
-        document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-        document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-        document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      }else if(projectsIsIntersected ) {
-        document.getElementById('projectsTog').classList.add('Cabecera-li-act-link')
-        document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-        document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-        document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      }else if(contactIsIntersected) {
-        document.getElementById('contactTog').classList.add('Cabecera-li-act-link')
-        document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-        document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-        document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-      }
+      // if (homeIsIntersecting) {
+      //   document.getElementById('homeTog').classList.add('Cabecera-h1-act-link')
+      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
+      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
+      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
+      // }else if(skillsIsIntersected) {
+      //   document.getElementById('skillsTog').classList.add('Cabecera-li-act-link')
+      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
+      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
+      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
+      // }else if(projectsIsIntersected ) {
+      //   document.getElementById('projectsTog').classList.add('Cabecera-li-act-link')
+      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
+      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
+      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
+      // }else if(contactIsIntersected) {
+      //   document.getElementById('contactTog').classList.add('Cabecera-li-act-link')
+      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
+      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
+      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
+      // }
     }, 175);
   },[homeIsIntersecting, skillsIsIntersected, projectsIsIntersected, contactIsIntersected ])
 

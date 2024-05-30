@@ -1,7 +1,6 @@
 .Cabecera {
     background-color: olive;
     width: 100%;
-    color: aliceblue;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -26,8 +25,7 @@
 
 .Cabecera-scrolled { 
     background-color:cadetblue;
-    position: fixed;
-    color:darkblue;
+    position: fixed;    
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -50,9 +48,9 @@
     border: 1.5px solid rgba(209, 213, 219, 0.6);
 }
 
-.Cabecera-h1 {}
-.Cabecera-a {
-    margin-left: .7rem;
+.Cabecera-scrolled h1, .Cabecera-h1 { 
+    transform: rotate(45deg);
+    transition: all 1s ease;
 }
 
 .Cabecera-button {
@@ -74,25 +72,32 @@
     align-items: center;
 }
 .Cabecera-li {
-    margin: 0 .5em;
+    margin: 0 1em;
     text-align: center;
-    background-color: black;
+    font-size: large;
+    font-weight: 500;
 }
 
-
+/* Estilos para ícono Switch */
 .Cabecera-ul li:last-child{
     margin-left: 1rem;
-
 }
 
 .Cabecera-h1-act-link{
-    /* background-color: orange; */
-    transition: all .8s ease;
+    transform: rotate(0deg);
+    transition: all 1s ease;
 }
 
 .Cabecera-li-act-link {
-    background-color:cornflowerblue;
+    margin: 0 1em;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
     transition: all .8s ease;
+}
+
+.Cabecera-li-act-link a {
+    border-bottom: 2px solid var(--text-primary);
 }
 
 @media screen and (max-width: 1200px) {
