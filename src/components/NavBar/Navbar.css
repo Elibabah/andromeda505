@@ -92,11 +92,11 @@
     margin: 0 1em;
     text-align: center;
     font-size: large;
-    font-weight: 600;
+    font-weight: 650;
     transition: all .8s ease;
 }
 
-.Cabecera-li-act-link a {
+.Cabecera-li a:hover {
     border-bottom: 2px solid var(--text-primary);
 }
 
