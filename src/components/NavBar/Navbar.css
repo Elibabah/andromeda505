@@ -96,7 +96,7 @@
     transition: all .8s ease;
 }
 
-.Cabecera-li a:hover {
+.Cabecera-li a:hover, .Cabecera-li-act-link a {
     border-bottom: 2px solid var(--text-primary);
 }
 
