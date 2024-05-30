@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    /* background-color: var(--background); */
+    background-color:blue;
 }
 
 .homeBox {
@@ -14,15 +15,8 @@
     gap: 5%;
 }
 
-.homeBox .imageHome {
-    background-color: black;
-    /* min-width: calc(50% - 5%); */
-    height: 200px;
-    width: 300px;
-}
-
 .homeBox .txtHome {
-    background-color: black;
+    background-color:burlywood;
     height: 500px;
     /* min-width: calc(50% - 25%); */
     width: 500px;

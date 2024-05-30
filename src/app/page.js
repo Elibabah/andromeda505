@@ -1,6 +1,10 @@
 "use client"
 
 import './Page.css'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 import { Contact } from '../components/Contact/Contact'
 import { Foot } from '../components/Foot/Foot'
@@ -9,7 +13,7 @@ import { NavBar } from '../components/NavBar/NavBar'
 import { Projects } from '../components/Projects/Projects'
 import { Skills } from '../components/Skills/Skills'
 import { useEffect } from 'react'
-import { useIntersection } from './hooks/useIntersection';
+import { useIntersection } from '../hooks/useIntersection';
 
 export default function Portfolio() {
   
@@ -48,7 +52,7 @@ export default function Portfolio() {
   <main className='mainApp'>
 
     <NavBar/>
-
+    
     <section ref={homeRef}  className='Home'>
       <Home/>
     </section>

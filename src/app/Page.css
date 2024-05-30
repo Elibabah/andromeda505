@@ -1,36 +1,19 @@
 @charset "UTF-8";
 /* Aquí definimos las Custom properties */
 :root {
-  /* --negro: #393939; */
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --main-typography: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Las adaptamos al modo oscuro */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-  }
-} */
-
-/* Modo claro */
-:root {
-  --body-bg: #FFFFFF;
-  --body-color: #000000;
-}
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-      --body-bg: #000000;
-      --body-color: #FFFFFF;
-  }
-}
-
-
-/* Opcional */
 /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-/* Opcional */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -40,6 +23,7 @@
     transition: none !important;
   }
 }
+
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
   margin: 0;
@@ -103,11 +87,11 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
+  background-color: var(--bg-txt-selected);
   color: var(--blanco);
 }
 ::selection {
-  background-color: var(--negro);
+  background-color: var(--bg-txt-selected);
   color: var(--blanco);
 }
 
@@ -148,11 +132,11 @@ svg {
 /* Configuramos la tipografía para toda la web */
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   font-size: 100%;
-  font-family: var(--tipo-principal);
-  background: var(--body-bg);
-  color: var(--body-color);
+  font-family: var(--main-typography);
+  background-color: var(--background);
+  color: var(--text-primary);
   /* opcional */
   line-height: 1.4em;
   /* opcional */
@@ -186,7 +170,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
-/*::::::::::::: APP :::::::::::::*/
+/*::::::::::::::::::::::::::::<< APP >>::::::::::::::::::::::::::::*/
 
 .mainApp {
   max-width: 1200px;
