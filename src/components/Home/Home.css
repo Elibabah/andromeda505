@@ -17,15 +17,15 @@
 
 .homeBox .txtHome {
     background-color:burlywood;
-    height: 500px;
+    /* height: 500px; */
     /* min-width: calc(50% - 25%); */
-    width: 500px;
+    /* width: 500px; */
 }
 
 .mayteHome {
     background-color: violet;
-    height: 500px;
-    width: 500px;
+    /* height: 500px;
+    width: 500px; */
 }
 
 /* Mobile */
