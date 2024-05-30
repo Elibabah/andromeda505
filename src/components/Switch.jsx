@@ -16,7 +16,7 @@ export const Switch = () => {
         <div className="container-switch">
             <label className="switch">
             <input type="checkbox" onChange={ handleChange } checked={ theme === 'dark' }/>
-            <checkbox style={{cursor: "pointer"}}> 
+            <checkbox style={{cursor: "pointer", marginRight: ".3rem"}}> 
                 { theme === 'dark' ? <DarkModeIcon style={{ fontSize: 30 }}/> : <LightModeOutlinedIcon style={{ fontSize: 30 }}/> }
             </checkbox>
             </label>
