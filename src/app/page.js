@@ -21,33 +21,31 @@ export default function Portfolio() {
   const [ skillsIsIntersected, skillsRef ] = useIntersection({ threshold:.7 })
   const [ projectsIsIntersected, projectsRef] = useIntersection({ threshold:.2 })
   const [ contactIsIntersected, contactRef ] = useIntersection({ threshold:.7 })
+  
+  const isActive = homeIsIntersecting ? 'homeIsIntersecting' : skillsIsIntersected ? 'skillsIsIntersected' : projectsIsIntersected ? 'projectsIsIntersected' : contactIsIntersected ? 'contactIsIntersected' : null
 
-  useEffect(()=>{
-    setTimeout(() => {
-      // if (homeIsIntersecting) {
-      //   document.getElementById('homeTog').classList.add('Cabecera-h1-act-link')
-      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      // }else if(skillsIsIntersected) {
-      //   document.getElementById('skillsTog').classList.add('Cabecera-li-act-link')
-      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      // }else if(projectsIsIntersected ) {
-      //   document.getElementById('projectsTog').classList.add('Cabecera-li-act-link')
-      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-      //   document.getElementById('contactTog').classList.remove('Cabecera-li-act-link')
-      // }else if(contactIsIntersected) {
-      //   document.getElementById('contactTog').classList.add('Cabecera-li-act-link')
-      //   document.getElementById('homeTog').classList.remove('Cabecera-h1-act-link')
-      //   document.getElementById('projectsTog').classList.remove('Cabecera-li-act-link')
-      //   document.getElementById('skillsTog').classList.remove('Cabecera-li-act-link')
-      // }
-    }, 175);
-  },[homeIsIntersecting, skillsIsIntersected, projectsIsIntersected, contactIsIntersected ])
-
+  useEffect(() => {
+    const getHomeById = document.getElementById('homeTog');
+    const getAllActiveElemByClass = document.querySelectorAll('.Cabecera-li-act-link');
+  
+    const removeActiveClassHome = () => getAllActiveElemByClass.forEach(el => el.classList.replace('Cabecera-li-act-link', 'Cabecera-li'));
+    const disableHomeActive = () => getHomeById.classList.replace('Cabecera-h1-act-link', 'Cabecera-h1');
+  
+    const disableAllElem = () => {
+      removeActiveClassHome();
+      disableHomeActive();
+    }
+    
+    const isIntersected = {
+      'homeIsIntersecting': () => { getHomeById.classList.replace('Cabecera-h1', 'Cabecera-h1-act-link'); removeActiveClassHome() },
+      'skillsIsIntersected': () => { disableAllElem(); document.getElementById('skillsTog').classList.replace('Cabecera-li', 'Cabecera-li-act-link')},
+      'projectsIsIntersected': () => { disableAllElem(); document.getElementById('projectsTog').classList.replace('Cabecera-li', 'Cabecera-li-act-link') },
+      'contactIsIntersected': () => { disableAllElem(); document.getElementById('contactTog').classList.replace('Cabecera-li', 'Cabecera-li-act-link') }
+    }
+  
+    if(isActive) isIntersected[isActive]();
+  }, [ isActive ])
+  
   return (
   <main className='mainApp'>
 
