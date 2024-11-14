@@ -176,6 +176,7 @@ body::-webkit-scrollbar-thumb {
   max-width: 1200px;
   margin: auto;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .Home .homeBox,
@@ -197,6 +198,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Foot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  max-width: 1200px;
+  margin: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,11 +217,21 @@ body::-webkit-scrollbar-thumb {
     padding-left: 40px;
     padding-right: 40px;
   }
+  .Foot {
+    background-color: red;
+    width: calc(100% - 80px);
+    margin: auto;
+  }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:508px) {
   .mainApp {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .Foot {
+    background-color: black;
+    width: calc(100% - 40px);
+    margin: auto;
   }
 }
